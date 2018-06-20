@@ -1,4 +1,4 @@
-Create(생성), Read(읽기), Update(갱신), Delete(삭제)
+# Create(생성), Read(읽기), Update(갱신), Delete(삭제)
 
 CREATE TABLE Users(name VARCHAR(128), email VARCHAR(128));
 
