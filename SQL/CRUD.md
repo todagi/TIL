@@ -18,9 +18,9 @@ UPDATE Users SET name = 'Olsen' WHERE email = 'os@umich.edu'
 
 SELECT * FROM Users WHERE email = 'csev@umich.edu'
 
-SELECT * FROM Users ORDER BY email 
+SELECT * FROM Users ORDER BY email        
 
-SELECT * FROM Users ORDER BY email DESC
+SELECT * FROM Users ORDER BY email DESC  
 
 
 
