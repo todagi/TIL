@@ -1,5 +1,6 @@
 ### ● Multi table Table SQL : primary key, join
 
+***
 
 CREATE TABLE "Artist"(
      "id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE,
