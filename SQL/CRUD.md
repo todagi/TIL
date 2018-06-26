@@ -28,4 +28,3 @@ SELECT * FROM Users ORDER BY email DESC
 
 
 ##### ※ by PY4E(https://www.py4e.com/)
-
