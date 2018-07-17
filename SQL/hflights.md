@@ -45,4 +45,4 @@ select avg(ArrDelay) from hflights
 select ArrDelay, count() from hflights group by ArrDelay
 
 #### 1월 데이터만 보기
-select * from hflights where Month == 1
+select * from hflights where Month == '1'
