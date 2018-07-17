@@ -43,3 +43,6 @@ select avg(ArrDelay) from hflights
 
 #### 연착 시간 별 횟수
 select ArrDelay, count() from hflights group by ArrDelay
+
+#### 1월 데이터만 보기
+select * from hflights where Month == 1
