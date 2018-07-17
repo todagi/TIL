@@ -15,7 +15,10 @@ select * from hflights where Dest = 'DFW'
 select Dest, count() from hflights group by Dest
 
 #### 비행시간 평균
-select avg(AirTime) from hflights   
+select avg(AirTime) from hflights  
+
+#### 비행시간 평균보다 많은 건수만 보기
+select * from hflights where AirTime >= (select avg(AirTime) from hflights)
 
 #### 비행기 번호 별 평균
 select FlightNum, avg(AirTime) from hflights group by FlightNum
@@ -46,3 +49,12 @@ select ArrDelay, count() from hflights group by ArrDelay
 
 #### 1월 데이터만 보기
 select * from hflights where Month = '1'
+
+#### 1월 중 금요일(6)만 보기
+select * from hflights where Month = '1' and DayOfWeek = '6' 
+
+#### 3월 중 주말(1:일요일, 7:토요일)만 보기 
+select * from hflights where Month = '3' and DayOfWeek = '1' or DayOfWeek = '7'
+
+#### 캐리어 종류별로 개수 보기
+select UniqueCarrier, count() from hflights group by UniqueCarrier
