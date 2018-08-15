@@ -29,7 +29,7 @@ Virtual Tables for SQL
 
 1. Make new table 'Students_Scores' by using table 1 and table 2  
 
-'''sql
+```sql
 
 create talbe 'Students_Scores' as select s.*, m.*
   from (select * from Student_List) s
@@ -38,4 +38,6 @@ create talbe 'Students_Scores' as select s.*, m.*
    and s.grade = m.grade
    and s.class = m.class
 
-'''
+```
+
+
