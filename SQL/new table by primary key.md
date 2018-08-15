@@ -27,7 +27,14 @@ Virtual Tables for SQL
 
 
 ###    
-###    
+### 
+
+
+
+
+
+
+
 
 1. Make new table 'Students_Scores' by using table 1 and table 2  
 
