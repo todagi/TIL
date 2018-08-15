@@ -26,6 +26,8 @@ Virtual Tables for SQL
 ![region_index](https://user-images.githubusercontent.com/33271520/44142111-283b34a0-a0ba-11e8-980e-bb9721721324.jpg)
 
 
+###    
+###    
 
 1. Make new table 'Students_Scores' by using table 1 and table 2  
 
