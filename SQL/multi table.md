@@ -1,6 +1,6 @@
 ### ● Multi table Table SQL : primary key, join
 
-***
+```sql
 
 CREATE TABLE "Artist"(
      "id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE,
@@ -61,7 +61,7 @@ select Track.title, Genre.name from Track join Genre on Track.genre_id = Genre.i
 select Track.title, Artist.name, Album.title, Genre.name from Track join Genre join Album join Artist on Track.genre_id = Genre.id and Track.album_id = Album.id and Album.artist_id = Artist.id
 
 
-
+```
 
 
 ※ by PY4E(https://www.py4e.com/)
