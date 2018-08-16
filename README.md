@@ -3,8 +3,8 @@
 -----------------------------------------------------------------------------------------------------------------------------------
 ## Organize What I learn
 
-● R
+### ● [R](https://github.com/todagi/TIL/tree/master/Python)
 <br>
-● Python
+### ● [Python](https://github.com/todagi/TIL/tree/master/R)
 <br>
-● SQL
+### ● [SQL](https://github.com/todagi/TIL/tree/master/SQL)
