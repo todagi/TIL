@@ -33,7 +33,7 @@ Virtual Tables for SQL
 
 ```sql
 
-create talbe 'Students_Scores' as select s.*, m.*
+create talbe Students_Scores as select s.*, m.*
   from (select * from Student_List) s
 , from (select * from Midterm_exam) m
  where s.name  = m.name
@@ -42,4 +42,24 @@ create talbe 'Students_Scores' as select s.*, m.*
 
 ```
 
+2. Make new table 'Major_Subjects_Score' by using table 2 and table 3 : table_1 + table 2('Korean' 'English' 'Math')
 
+```sql
+
+create table Major_subjects_Score as s*
+     , m.Korean
+     , m.English
+     , m.Math
+   from  (select * from Student_List) s
+  ,      (select b.name
+              ,  b.grade
+              ,  b.class
+              ,  b.Korean
+              ,  b.English
+              ,  b.Math
+           from  Midterm_exam b) m
+ where s.name  = m.name
+   and s.grade = m.grade
+   and s.class = m.class
+```
+           
