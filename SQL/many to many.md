@@ -1,7 +1,6 @@
 ### ● many to many relationship
 
-
-***
+```sql
 
 CREATE TABLE User(
     id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
@@ -48,13 +47,16 @@ INSERT INTO Member (user_id, course_id, role) VALUES (4, 3, 0);
 
 INSERT INTO Member (user_id, course_id, role) VALUES (4, 4, 0);
 
+```
+
 # role 변수가 연결 테이블에서 모델링됨
+```sql
 
 SELECT User.name, Member.role, Course.title 
 From User JOIN Member Join Course 
 ON Member.user_id = User.id AND Member.course_id = Course.id
 ORDER BY course.title, Member.role DESC, User.name
-
+```
 
 
 ※ by PY4E(https://www.py4e.com/)
