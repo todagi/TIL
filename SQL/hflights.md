@@ -1,4 +1,4 @@
-hflights : Flights that departed Houston in 2011
+## hflights : Flights that departed Houston in 2011
 
 ***
 ```sql
