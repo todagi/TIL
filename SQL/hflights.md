@@ -3,7 +3,8 @@ hflights : Flights that departed Houston in 2011
 ***
 
 #### 연도 확인
-```select Year, count() from hflights```
+```sql
+select Year, count() from hflights```
 
 #### 출발시간과 도착시간만 보기
 ```select DepTime, ArrTime from hflights``` 
