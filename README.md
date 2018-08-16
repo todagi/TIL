@@ -4,5 +4,7 @@
 ## Organize What I learn
 
 ● R
+<br>
 ● Python
+<br>
 ● SQL
