@@ -50,8 +50,8 @@ create table Major_subjects_Score as s*
      , m.Korean
      , m.English
      , m.Math
-   from  (select * from Student_List) s
-  ,      (select b.name
+  from  (select * from Student_List) s
+  ,     (select b.name
               ,  b.grade
               ,  b.class
               ,  b.Korean
@@ -62,4 +62,26 @@ create table Major_subjects_Score as s*
    and s.grade = m.grade
    and s.class = m.class
 ```
+
+3. See data about scores of 'Midterm_exam' & name and subject of 'Supplementary_Learning'
+
+```sql
+
+select *
+  from (select  b.name
+              , b.Korean
+              , b.Math
+              , b.English
+              , b.Science
+              , b.Society
+              , b.history
+          from  'Midterm_exam' b) s
+     , (select  d.name
+              , d.subject
+          from 'Supplementary_Learning' d) m
+ where s.name = m.name   
+    
+
+
+
            
