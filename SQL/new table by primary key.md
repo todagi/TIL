@@ -97,9 +97,10 @@ create table Student_Education_Environmnet as
      , m.Private_Schools
      , m.Libraries
  from (select * from Student_List) s
-    , (select * from AddressCodeConversion)  
+    , (select * from AddressCodeConversion) k  
     , (select * from Regional_Index_about_education) m
-where s.address = m.Address    
+where s.address     = m.Address    
+      k.AddressCode = m.Address_code
 
 ```
     
