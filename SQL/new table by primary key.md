@@ -82,7 +82,8 @@ select *
  where s.name = m.name   
  ```
  
- 4. make table 'Student_Education_Environmnet' by using "Student_List", "Address Code Conversion" and "Regional_Index_about_education"
+ 4. make table 'Student_Education_Environmnet' by using "Student_List", "Address Code Conversion" and "Regional_Index_about_education"  
+    
     columns : 'student_code', 'name', 'grade', 'class', 'AddressCode', 'Average_Income', 'Private_Schools', 'Libraries'
     
 ```sql
