@@ -81,6 +81,26 @@ select *
           from 'Supplementary_Learning' d) m
  where s.name = m.name   
  ```
+ 
+ 4. make table 'Student_Education_Environmnet' by using "Student_List", "Address Code Conversion" and "Regional_Index_about_education"
+    columns : 'student_code', 'name', 'grade', 'class', 'AddressCode', 'Average_Income', 'Private_Schools', 'Libraries'
+    
+```sql
+create table Student_Education_Environmnet as 
+     , s.student_code
+     , s.name
+     , s.grade
+     , s.class
+     , m.AddressCode
+     , m.Average_Income
+     , m.Private_Schools
+     , m.Libraries
+ from (select * from Student_List) s
+    , (select * from AddressCodeConversion)  
+    , (select * from Regional_Index_about_education) m
+where s.address = m.Address    
+
+```
     
 
 
