@@ -104,16 +104,20 @@ where s.address     = m.Address
 
 ```
     
-5. See data about scores above 80 of Korean and English with name, grade and class
+5. See data about scores above 80 of Korean and English with student_code, name, grade and class
 
 ```sql
 select *
-  from (select a.name
+  from (select a.student_code
+             , a.name
              , a.grade
              , a.class
           from Student_List a) k
-     , (select b.Korean
-               b.English
+     , (select b.name
+             , b.grade
+             , b.class
+             , b.Korean
+             , b.English
           from Midterm_exam b) j
  where k.name  = j.name
    and k.grade = k.grade
