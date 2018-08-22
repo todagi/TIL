@@ -122,6 +122,5 @@ select *
  where k.name  = j.name
    and k.grade = k.grade
    adn k.class = k.class
-
-
-           
+   
+```
