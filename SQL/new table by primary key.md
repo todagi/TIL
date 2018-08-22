@@ -75,10 +75,10 @@ select *
               , b.Science
               , b.Society
               , b.history
-          from  'Midterm_exam' b) s
+          from  Midterm_exam b) s
      , (select  d.name
               , d.subject
-          from 'Supplementary_Learning' d) m
+          from  Supplementary_Learning d) m
  where s.name = m.name   
  ```
  
@@ -104,7 +104,20 @@ where s.address     = m.Address
 
 ```
     
+5. See data about scores above 80 of Korean and English with name, grade and class
 
+```sql
+select *
+  from (select a.name
+             , a.grade
+             , a.class
+          from Student_List a) k
+     , (select b.Korean
+               b.English
+          from Midterm_exam b) j
+ where k.name  = j.name
+   and k.grade = k.grade
+   adn k.class = k.class
 
 
            
