@@ -253,3 +253,125 @@ print(game4.name, " : ", game4.names)
 리니지  :  ['RPG']
 오버워치  :  ['FPS']
 ```
+
+```python
+
+class Myhome:
+    home = 'Guri'
+
+result = dir(Myhome)
+print(result)
+
+
+['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'home']
+
+
+num = 0
+
+for intele in result:
+    num += 1
+    print(num, intele, end = " ")
+    
+1 __class__ 2 __delattr__ 3 __dict__ 4 __dir__ 5 __doc__ 6 __eq__ 7 __format__ 8 __ge__ 9 _    
+
+```
+
+```python
+class Myhome:
+    __home = 'Guri'
+
+result = dir(Myhome)
+
+num = 0
+
+for intele in result:
+    num += 1
+    print(num, intele,  end = " ")
+
+1 _Myhome__home 2 __class__ 3 __delattr__ 4 __dict__ 5 __dir__ 6 __doc__ 7 __eq__ 8 __format__ 9 __ge__ 10 __getattribute__ 11 __gt__ 12 __hash__ 13 __init__ 14 __init_subclass__ 15 __le__ 16 __lt__ 17 __module__ 18 __ne__ 19 __new__ 20 __reduce__ 21 __reduce_ex__ 22 __repr__ 23 __setattr__ 24 __sizeof__ 25 __str__ 26 __subclasshook__ 27 __weakref__ 
+
+
+```
+
+```python
+class meal:
+    __lunch =  '샌드위치'
+    __dinner = '비빔밥'
+
+    def get_lunch(self):
+        return self.__lunch
+
+    def get_dinner(self):
+        return self.__dinner
+
+    def set_lunch(self, lunch):
+        self.__lunch = lunch
+
+    def set_dinner(self, dinner):
+        self.__dinner = dinner
+
+myMeal = meal()
+my_lunch = myMeal.get_lunch()
+my_dinner = myMeal.get_dinner()
+
+print("I ate %s and %s yesterday" % (my_lunch, my_dinner) )
+
+
+I ate 샌드위치 and 비빔밥 yesterday
+
+
+```
+
+```python
+
+class meal:
+    __lunch =  '샌드위치'
+    __dinner = '비빔밥'
+
+    def get_lunch(self):
+        return self.__lunch
+
+    def get_dinner(self):
+        return self.__dinner
+
+    def set_lunch(self, lunch):
+        self.__lunch = lunch
+
+    def set_dinner(self, dinner):
+        self.__dinner = dinner
+
+myMeal = meal()
+my_lunch = myMeal.get_lunch()
+my_dinner = myMeal.get_dinner()
+
+
+myMeal.set_lunch('햄버거')
+myMeal.set_dinner('설렁탕')
+
+my_lunch = myMeal.get_lunch()
+my_dinner = myMeal.get_dinner()
+
+print('Today I will eat {ml} in the afternoon and {dl} at night'.format(ml = my_lunch, dl = my_dinner))
+
+
+Today I will eat 햄버거 in the afternoon and 설렁탕 at night
+
+```
+
+```python
+var = 10
+
+def glre():
+    var = 20
+    return var
+
+
+print('Global_variables : ', var)
+print('Regional_variables : ', glre())
+
+
+Global_variables :  10
+Regional_variables :  20
+
+```
+
