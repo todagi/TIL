@@ -1,6 +1,24 @@
 ## day 3
 
 ============================================================================
+```python
+
+def intro_car(brand, seats =4, type = '세단'):
+    print('my car is {b} {s}인승 {t}이다.'.format(
+          b= brand,
+          s= seats,
+          t= type
+    ) )
+
+intro_car('아우디')
+
+intro_car('벤츠', seats = 2)
+
+intro_car(brand = '머큐리', type = '머슬카')
+
+intro_car('폭스바겐', 6, '집차')
+
+```
 
 ```python
 
