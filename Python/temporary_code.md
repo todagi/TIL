@@ -3,6 +3,14 @@
 ============================================================================
 ```python
 
+for i in range(9, 1, -1):
+    print(i)
+    
+```
+
+
+```python
+
 def intro_car(brand, seats =4, type = '세단'):
     print('my car is {b} {s}인승 {t}이다.'.format(
           b= brand,
@@ -108,6 +116,54 @@ def introduce_your_family(name, *family_names, **family_info):
     pass
 
 print(introduce_your_family.__doc__)
+
+```
+
+```python
+string = '클래스'
+
+print('string은 %s이다.' % type(string))
+
+
+class Song:
+    song = '선물'
+
+    def __init__(self, name):
+        self.name = name
+
+    def sing_a_song(self):
+        print(self.name + "이는 " + self.song + ' 노래를 부릅니다.')
+
+singer1 = Song('지영')
+singer2 = Song('원영')
+singer3 = Song('유란')
+
+singer1.sing_a_song()
+singer2.song = '동화'
+singer3.song = '몰락'
+singer2.sing_a_song()
+singer3.sing_a_song()
+```
+
+
+```python
+
+class Game:
+    names = []
+
+    def __init__(self, name):
+        self.name = name
+    def add_genre(self, genre):
+        self.names.append(genre)
+
+game1 = Game('스타크래프트')
+game2 = Game('리그오브레전드')
+
+game1.add_genre('RTS')
+game2.add_genre('AOS')
+
+print(game1.name, " : ", game1.names)
+print(game2.name, " : ", game2.names)
 
 ```
 
