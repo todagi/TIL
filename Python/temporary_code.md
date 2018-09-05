@@ -146,6 +146,7 @@ singer3.sing_a_song()
 ```
 
 
+#### 클래스 변수 -> 인스턴스 간 공유 됨
 ```python
 
 class Game:
@@ -167,3 +168,24 @@ print(game2.name, " : ", game2.names)
 
 ```
 
+#### 인스턴스 변수 -> 인스턴스간 공유 안됨
+
+```python
+class Game2:
+    def __init__(self, name):
+        self.name = name
+        self.names = []
+
+    def add_genre(self, genre):
+        self.names.append(genre)
+
+game3 = Game2('리니지')
+game4 = Game2('오버워치')
+
+game3.add_genre('RPG')
+game4.add_genre('FPS')
+
+print(game3.name, " : ", game3.names)
+print(game4.name, " : ", game4.names)
+
+```
