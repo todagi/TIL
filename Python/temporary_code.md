@@ -143,6 +143,12 @@ singer2.song = '동화'
 singer3.song = '몰락'
 singer2.sing_a_song()
 singer3.sing_a_song()
+
+
+
+지영이는 선물 노래를 부릅니다.
+원영이는 동화 노래를 부릅니다.
+유란이는 몰락 노래를 부릅니다.
 ```
 
 
@@ -165,6 +171,8 @@ game2.add_genre('AOS')
 
 print(game1.name, " : ", game1.names)
 print(game2.name, " : ", game2.names)
+
+
 
 스타크래프트  :  ['RTS', 'AOS']
 리그오브레전드  :  ['RTS', 'AOS']
@@ -190,6 +198,8 @@ game4.add_genre('FPS')
 
 print(game3.name, " : ", game3.names)
 print(game4.name, " : ", game4.names)
+
+
 
 리니지  :  ['RPG']
 오버워치  :  ['FPS']
