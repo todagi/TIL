@@ -6,6 +6,16 @@
 for i in range(9, 1, -1):
     print(i)
     
+9
+8
+7
+6
+5
+4
+3
+2    
+    
+    
 ```
 
 
@@ -25,6 +35,13 @@ intro_car('벤츠', seats = 2)
 intro_car(brand = '머큐리', type = '머슬카')
 
 intro_car('폭스바겐', 6, '집차')
+
+
+my car is 아우디 4인승 세단이다.
+my car is 벤츠 2인승 세단이다.
+my car is 머큐리 4인승 머슬카이다.
+my car is 폭스바겐 6인승 집차이다.
+
 
 ```
 
@@ -46,6 +63,15 @@ def introduceMyFamily(my_name, *family_names, **family_info):
 
 introduceMyFamily('영희', '찬희', '영수', '동수', 주소 = '아파트', 가훈 = '밥 먹기')
 
+
+안녕하세요, 저는 영희 입니다.
+-----------------------------------
+제 가족들의 이름은 아래와 같아요. 
+* 찬희 	* 영수 	* 동수 	
+-----------------------------------
+- 주소 : 아파트 
+- 가훈 : 밥 먹기 
+
 ```
 
 ```python
@@ -56,6 +82,9 @@ def add(a, b):
 data = (20, 30)
 
 print(add(*data))
+
+50
+
 
 ```
 
@@ -70,6 +99,9 @@ def intro(name, greet, happy):
 
 intro_dict = {'name' : '진수', 'greet' : '안녕', 'happy' : '반가워'}
 print(intro(**intro_dict))
+
+
+진수님, 안녕, 반가워!
 
 ```
 
@@ -87,6 +119,8 @@ introduce_dict = {
 }
 print(introduce(**introduce_dict))
 
+김진수님, 안녕하세요
+
 ```
 
 ```python 
@@ -98,6 +132,9 @@ def mf():
     pass
 
 print(mf.__doc__)
+
+
+    아무것도 안하고 주석만 호출하는 함수
 
 ```
 
@@ -117,12 +154,24 @@ def introduce_your_family(name, *family_names, **family_info):
 
 print(introduce_your_family.__doc__)
 
+
+
+    가족을 소개하는 함수입니다.
+    Args:
+        name: 자기이름 입력하기
+        *family_names: 가족이름 입력하기
+        **family_info: 가족소개하기
+
+    Returns: 없습니다.
+
 ```
 
 ```python
 string = '클래스'
 
 print('string은 %s이다.' % type(string))
+
+string은 <class 'str'>이다.
 
 
 class Song:
