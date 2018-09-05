@@ -166,6 +166,9 @@ game2.add_genre('AOS')
 print(game1.name, " : ", game1.names)
 print(game2.name, " : ", game2.names)
 
+스타크래프트  :  ['RTS', 'AOS']
+리그오브레전드  :  ['RTS', 'AOS']
+
 ```
 
 #### 인스턴스 변수 -> 인스턴스간 공유 안됨
@@ -188,4 +191,6 @@ game4.add_genre('FPS')
 print(game3.name, " : ", game3.names)
 print(game4.name, " : ", game4.names)
 
+리니지  :  ['RPG']
+오버워치  :  ['FPS']
 ```
