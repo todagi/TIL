@@ -21,7 +21,8 @@ introduceMyFamily('영희', '찬희', '영수', '동수', 주소 = '아파트', 
 """
 
 """python
-ef add(a, b):
+
+def add(a, b):
     return a + b
 
 data = (20, 30)
@@ -31,6 +32,7 @@ print(add(*data))
 """
 
 """python 
+
 def intro(name, greet, happy):
     return "{name}님, {greet}, {happy}!".format(
              name = name,
@@ -42,6 +44,9 @@ intro_dict = {'name' : '진수', 'greet' : '안녕', 'happy' : '반가워'}
 print(intro(**intro_dict))
 
 """
+
+"""python
+
 def introduce(name, greeting):
     return "{name}님, {greeting}".format(
         name=name,
@@ -54,8 +59,10 @@ introduce_dict = {
 }
 print(introduce(**introduce_dict))
 
+"""
 
 """python 
+
 def mf():
     """
     아무것도 안하고 주석만 호출하는 함수
@@ -65,7 +72,9 @@ def mf():
 print(mf.__doc__)
 
 """
+
 """python
+
 def introduce_your_family(name, *family_names, **family_info):
     '''
     가족을 소개하는 함수입니다.
