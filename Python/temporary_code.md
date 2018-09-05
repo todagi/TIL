@@ -1,6 +1,8 @@
 ## day 3
 
-"""python
+============================================================================
+
+```python
 
 def introduceMyFamily(my_name, *family_names, **family_info):
     print('안녕하세요, 저는 %s 입니다.' % (my_name))
@@ -18,9 +20,9 @@ def introduceMyFamily(my_name, *family_names, **family_info):
 
 introduceMyFamily('영희', '찬희', '영수', '동수', 주소 = '아파트', 가훈 = '밥 먹기')
 
-"""
+```
 
-"""python
+```python
 
 def add(a, b):
     return a + b
@@ -29,9 +31,9 @@ data = (20, 30)
 
 print(add(*data))
 
-"""
+```
 
-"""python 
+```python 
 
 def intro(name, greet, happy):
     return "{name}님, {greet}, {happy}!".format(
@@ -43,9 +45,9 @@ def intro(name, greet, happy):
 intro_dict = {'name' : '진수', 'greet' : '안녕', 'happy' : '반가워'}
 print(intro(**intro_dict))
 
-"""
+```
 
-"""python
+```python
 
 def introduce(name, greeting):
     return "{name}님, {greeting}".format(
@@ -59,9 +61,9 @@ introduce_dict = {
 }
 print(introduce(**introduce_dict))
 
-"""
+```
 
-"""python 
+```python 
 
 def mf():
     """
@@ -71,9 +73,9 @@ def mf():
 
 print(mf.__doc__)
 
-"""
+```
 
-"""python
+```python
 
 def introduce_your_family(name, *family_names, **family_info):
     '''
@@ -89,5 +91,5 @@ def introduce_your_family(name, *family_names, **family_info):
 
 print(introduce_your_family.__doc__)
 
-"""
+```
 
