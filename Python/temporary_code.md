@@ -132,3 +132,24 @@ finally:
 exception_test3()
 
 ```
+
+```python
+def exception_test3():
+    print("[1] Can you add 2 and '2' in python? ")
+
+    try:
+        print("[2] Try it~! ", 2 + '2')  # TypeError 발생
+    except TypeError as err:
+        print("[2] TypeError: {}".format(err))  # 에러 메시지 출력
+
+    finally:
+        print("마지막")
+
+
+
+    print("[3] It's not possible to add integer and string together. ")
+
+
+
+exception_test3()
+```
