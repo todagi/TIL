@@ -2,6 +2,10 @@
 
 ============================================================================
 
+### [10 minutes to pandas 판다스 공부](https://pandas.pydata.org/pandas-docs/stable/10min.html)
+### 쥬피터 팁 : 함수쓸 때 탭 키를 누르면 함수들이 뜬다. 혹은 함수하고 '.'치고 탭을 치면 하위 메서드 들이 뜬다. 
+
+
 Json
 
 ```python
@@ -60,4 +64,43 @@ def g_max(k):
  6
 ```
  
+ ```python
+ 
+ data = ["cat", "cat", "cat", "sheep", "sheep", "duck", "duck", "duck", "duck" ]
 
+dic_data = {}
+dic_data['cat'] = 0
+dic_data['sheep'] = 0
+dic_data['duck'] = 0
+
+for i in data:
+
+    if i == 'cat':
+        dic_data['cat'] += 1
+    elif i == 'sheep':
+        dic_data['sheep'] += 1
+    elif i == 'duck':
+        dic_data['duck'] += 1
+        
+dic_data
+{'cat': 3, 'sheep': 2, 'duck': 4}
+ 
+```
+```python
+def draw_hist(data):
+    for i, j in data.items():
+        print(i,"\t", "=" *j, )
+draw_hist(dic_data)
+
+cat 	 ===
+sheep 	 ==
+duck 	 ====
+
+```
+
+
+```python
+from pandas import Series, DataFrame
+# 위처럼 해주어야  'pd.DataFrame(df)' 안하고 바로 'Datafame(df) 할 수 있다.
+
+```
