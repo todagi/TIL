@@ -44,3 +44,20 @@ j_c['Country']
 
 '''
 
+큰수 찾기
+
+```python
+
+k = [1, -2, 3, 6, -7, 4]
+
+def g_max(k):
+    z = k[0]
+    for i in k:
+        if z < i:
+            z = i
+    return z
+ g_max(k)
+ 6
+```
+ 
+
