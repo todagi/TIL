@@ -4,6 +4,7 @@
 
 ### [10 minutes to pandas 판다스 공부](https://pandas.pydata.org/pandas-docs/stable/10min.html)
 ### 쥬피터 팁 : 함수쓸 때 탭 키를 누르면 함수들이 뜬다. 혹은 함수하고 '.'치고 탭을 치면 하위 메서드 들이 뜬다. 
+### cost function for regression neural network(텐서플로 리그레션에서 사용할 cost function 찾기
 
 
 Json
@@ -97,10 +98,161 @@ sheep 	 ==
 duck 	 ====
 
 ```
+```python
+# reduce
+def multiply(a, b):
+    print((a, b))
+    return a * b
+
+reduce(
+    multiply,
+    [1, 2, 3, 4, 5],
+    0,               # 기본값!!! (*)
+)
+
+(0, 1)
+(0, 2)
+(0, 3)
+(0, 4)
+(0, 5)
+0
+
+def multiply(a, b):
+    print((a, b))
+    return a * b
+
+reduce(
+    multiply,
+    [1, 2, 3, 4, 5],
+    1,               # 기본값!!! (*)
+)
+
+(1, 1)
+(1, 2)
+(2, 3)
+(6, 4)
+(24, 5)
+120
 
 
 ```python
 from pandas import Series, DataFrame
 # 위처럼 해주어야  'pd.DataFrame(df)' 안하고 바로 'Datafame(df) 할 수 있다.
 
+from functools import reduce
+# reduce 함수도 불러와야 
+
 ```
+
+
+실습. Histogram 함수 작성해보기
+리스트를 받아서, 히스토그램을 그리는 함수
+
+입력값 : ["cat", "cat", "cat", "sheep", "sheep", "duck", "duck", "duck", "duck" ]
+#### 1. 히스토그램을 그리는 함수 
+  input: {'cat': 3, 'duck': 4, 'sheep': 2} => output: 그림 
+
+#### 2. 리스트를 받아서, 숫자를 세는 함수
+  input: list => output: histogram dict
+  
+  {'cat': 3, 'duck': 4, 'sheep': 2}
+---------------------------------------- 
+  cat    ===
+  sheep  ==
+  duck   ====
+  
+```python
+# 중간과정 찍기
+
+# reduce(모듈, 입력값, 기본값)
+
+from functools import reduce
+
+data = ["cat", "cat", "cat", "sheep", "sheep", "duck", "duck", "duck", "duck" ]
+
+# 모듈 만들기
+
+def get_count(reuslt_dict, element):
+    
+    if result_dict.get(element):
+        result_dict[element] += 1
+        
+    else:
+        result_dict[element] = 1
+    
+    print(element, " ", result_dict)
+    
+    return reuslt_dict
+
+result_dict = {} # dict{}
+print("초기값 : ", result_dict)
+
+# 1 리듀스 식 만들기
+reduce(
+       get_count,
+       data,
+       result_dict         
+)
+
+
+초기값 :  {}
+cat   {'cat': 1}
+cat   {'cat': 2}
+cat   {'cat': 3}
+sheep   {'cat': 3, 'sheep': 1}
+sheep   {'cat': 3, 'sheep': 2}
+duck   {'cat': 3, 'sheep': 2, 'duck': 1}
+duck   {'cat': 3, 'sheep': 2, 'duck': 2}
+duck   {'cat': 3, 'sheep': 2, 'duck': 3}
+duck   {'cat': 3, 'sheep': 2, 'duck': 4}
+
+Out[2]:
+
+{'cat': 3, 'sheep': 2, 'duck': 4}
+
+
+```
+```python
+# 없는 버전
+
+from functools import reduce
+
+data = ["cat", "cat", "cat", "sheep", "sheep", "duck", "duck", "duck", "duck" ]
+
+def get_count(reuslt_dict, element):
+    
+    if result_dict.get(element):
+        result_dict[element] += 1
+        
+    else:
+        result_dict[element] = 1
+    
+
+    
+    return reuslt_dict
+
+result_dict = {} # dict{}
+
+reduce(
+       get_count,
+       data,
+       result_dict) 
+       
+{'cat': 3, 'sheep': 2, 'duck': 4}
+
+```
+
+```python
+# 히스토그램 찍기
+
+def draw_hist(result):
+    for key, val in result.items():
+        print(key, "\t", "="*val)
+        
+draw_hist(result_dict)
+
+
+cat 	 ===
+sheep 	 ==
+duck 	 ====
+
