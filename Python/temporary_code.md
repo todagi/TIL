@@ -5,7 +5,7 @@
 ### [10 minutes to pandas 판다스 공부](https://pandas.pydata.org/pandas-docs/stable/10min.html)
 ### 쥬피터 팁 : 함수쓸 때 탭 키를 누르면 함수들이 뜬다. 혹은 함수하고 '.'치고 탭을 치면 하위 메서드 들이 뜬다. 
 ### cost function for regression neural network(텐서플로 리그레션에서 사용할 cost function 찾기
-
+### [re(정규표현식 표현 참조](http://www.nextree.co.kr/p4327/)
 
 Json
 
